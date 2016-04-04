@@ -37,15 +37,15 @@ getRepos.then((repos) => {
 github上所有前端项目（HTML+CSS+JavaScript）的总排名！
 本页面使用nodejs结合github的api自动生成，您可以通过运行\`node index.js\`来生成最新的排行榜。<br><br>\n`;
 
-    markdown += '| Rank | Name(Description) | Star | Language | Created_At |\n';
+    markdown += ' Rank | Name(Description) | Star | Language | Created_At \n';
 
-    markdown += '| --- | --- | --- | --- | --- |\n';
+    markdown += ' --- | --- | --- | --- | --- \n';
 
     repos = JSON.parse(repos);
 
     repos.items.forEach((item, index) => {
 
-        markdown += `|${index+1}|[**${item.full_name}**](${item.html_url})<br><br>${item.description}|${item.stargazers_count}|${item.language}|${item.created_at.split('T')[0]}|\n`;
+        markdown += `${index+1}|[**${item.full_name}**](${item.html_url})<br><br>${item.description}|${item.stargazers_count}|${item.language}|${item.created_at.split('T')[0]}\n`;
 
     });
 
