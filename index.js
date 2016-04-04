@@ -35,7 +35,7 @@ getRepos.then((repos) => {
 `# frontend-repos-ranking
 ## ${(new Date()).toDateString()}
 github上所有前端项目（HTML+CSS+JavaScript）的总排名！
-本页面使用nodejs结合github的api自动生成，您可以通过运行\`node index.js\`来生成最新的排行榜。<br><br>\n`;
+本页面使用nodejs结合github的api自动生成，您可以通过运行\`node index.js\`来生成最新的排行榜。\n\n`;
 
     markdown += ' Rank | Name(Description) | Star | Language | Created_At \n';
 
